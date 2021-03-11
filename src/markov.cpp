@@ -1,5 +1,6 @@
 #include "./markov.h"
 #include <fstream>
+#include <cstdlib>
 
 bool Markov::readFile(const std::string& fileName)
 {
