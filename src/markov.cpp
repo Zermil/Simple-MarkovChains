@@ -2,6 +2,12 @@
 #include <fstream>
 #include <cstdlib>
 
+void Markov::createMarkovChain()
+{
+  for (size_t i = 0; i < this->words_.size() - 1; ++i)
+    this->markovChain_[this->words_[i]].push_back(this->words_[i + 1]);
+}
+
 bool Markov::readFile(const std::string& fileName)
 {
   std::ifstream readFile(fileName);
@@ -13,9 +19,8 @@ bool Markov::readFile(const std::string& fileName)
     this->words_.push_back(currentWord);
 
   readFile.close();
-
-  for (size_t i = 0; i < this->words_.size() - 1; ++i)
-    this->markovChain_[this->words_[i]].push_back(this->words_[i + 1]);
+  
+  this->createMarkovChain();
 
   return true;
 }

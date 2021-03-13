@@ -13,6 +13,8 @@ public:
 private:
   std::vector<std::string> words_;
   std::unordered_map<std::string, std::vector<std::string>> markovChain_;
+  
+  void createMarkovChain();
 };
 
 #endif // MARKOV_H_

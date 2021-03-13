@@ -4,7 +4,7 @@ Very simple implementation of [Markov Chains](https://en.wikipedia.org/wiki/Mark
 
 ## Quick start/Instructions
 
-Nothing special here, you can compile 'main.cpp' and then run it, be mindful that you need some sort of text file for it to work.
+Nothing special here, you can compile 'cpp files' and then run the 'program', be mindful that you need to provide some text file for it to work.
 
 ## Book used
 
